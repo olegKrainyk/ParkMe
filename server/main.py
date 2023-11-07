@@ -1,6 +1,8 @@
 from flask import Flask, jsonify
 import cv2
 from ultralytics import YOLO
+# Load a pretrained YOLO model (recommended for training)
+model = YOLO('yolov8n.pt')
 
 # Opens a image in RGB mode
 def crop_image():
@@ -26,11 +28,16 @@ def process_image():
         model = YOLO('yolov8n.pt')
         crop_image()
         results = model(source="source/crop_images/image1.png", conf=0.3, save=True)
+        numberCars = 0;
 
-        log = results[0].tojson()
+        for result in results:
+            boxes = result.boxes.cpu().numpy()
+            for box in boxes:
+                if (result.names[int(box.cls[0])] == 'car') or (result.names[int(box.cls[0])] == 'truck'):
+                    numberCars += 1
 
         with open("cars.txt", "wt") as file:
-            file.write(str(log))
+            file.write(str(numberCars))
 
         with open("cars.txt", "rt") as file:
             file_content = file.read()
