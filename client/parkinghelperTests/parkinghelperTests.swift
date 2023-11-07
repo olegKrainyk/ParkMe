@@ -1,14 +1,14 @@
 //
-//  parkTests.swift
-//  parkTests
+//  parkinghelperTests.swift
+//  parkinghelperTests
 //
-//  Created by Roman Loboda on 11/5/23.
+//  Created by Oleh Krainyk on 11/5/23.
 //
 
 import XCTest
-@testable import park
+@testable import parkinghelper
 
-final class parkTests: XCTestCase {
+final class parkinghelperTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

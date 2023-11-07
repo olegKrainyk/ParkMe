@@ -1,17 +1,19 @@
 //
-//  parkApp.swift
-//  park
+//  parkinghelperApp.swift
+//  parkinghelper
 //
-//  Created by Roman Loboda on 11/5/23.
+//  Created by Oleh Krainyk on 11/5/23.
 //
 
 import SwiftUI
 
 @main
-struct parkApp: App {
+struct parkinghelperApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
 }
+
+

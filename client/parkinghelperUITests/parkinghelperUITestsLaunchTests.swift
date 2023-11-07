@@ -1,13 +1,13 @@
 //
-//  parkUITestsLaunchTests.swift
-//  parkUITests
+//  parkinghelperUITestsLaunchTests.swift
+//  parkinghelperUITests
 //
-//  Created by Roman Loboda on 11/5/23.
+//  Created by Oleh Krainyk on 11/5/23.
 //
 
 import XCTest
 
-final class parkUITestsLaunchTests: XCTestCase {
+final class parkinghelperUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
