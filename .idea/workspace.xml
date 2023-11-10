@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49142691-95c0-4168-ae45-d57cdeec53b0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/parkinghelper.xcodeproj/project.xcworkspace/xcuserdata/roman.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/client/parkinghelper.xcodeproj/project.xcworkspace/xcuserdata/roman.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/parkmeIOS/park/park/ContentView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/client/parkmeIOS/park/park/ContentView.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/cars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/cars.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/source/crop_images/image1.png" beforeDir="false" afterPath="$PROJECT_DIR$/server/source/crop_images/image1.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +23,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2XpLyCQEd7w3KGUaoGbmPPqn6XC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,7 +36,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "crop__image",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/roman/Documents/GitHub/ParkMe",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -50,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699321329141</updated>
-      <workItem from="1699321330217" duration="2800000" />
+      <workItem from="1699321330217" duration="4352000" />
     </task>
     <servers />
   </component>
@@ -58,6 +61,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ParkMe$main.coverage" NAME="main Coverage Results" MODIFIED="1699323501065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/ParkMe$main.coverage" NAME="main Coverage Results" MODIFIED="1699326048892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
   </component>
 </project>

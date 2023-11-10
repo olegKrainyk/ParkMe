@@ -9,10 +9,10 @@ def crop_image():
     img = cv2.imread("source/northTOeast0.png")
 
     # Define the coordinates and dimensions for cropping
-    x = 1730  # X-coordinate of the top-left corner
-    y = 1730  # Y-coordinate of the top-left corner
-    w = 1741  # Width of the cropped region
-    h = 1200  # Height of the cropped region
+    x = 0  # X-coordinate of the top-left corner
+    y = 1340  # Y-coordinate of the top-left corner
+    w = 1544  # Width of the cropped region
+    h = 800  # Height of the cropped region
 
     crop_img = img[y:y + h, x:x + w]
     save_path = "source/crop_images/image1.png"
