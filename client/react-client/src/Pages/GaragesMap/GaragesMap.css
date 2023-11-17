@@ -1,13 +1,15 @@
 #root {
+    margin-top: 0%;
     margin: 100px auto;
     max-width: 500px;
     padding-bottom: 100px;
   }
   
   .card {
+    margin: 120px;
     font-size: 164px;
     width: 300px;
-    height: 430px;
+    height: 330px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,6 +29,8 @@
     position: relative;
     padding-top: 20px;
     margin-bottom: -120px;
+    margin-top: -200px;
+    color:black
   }
   
   .splash {

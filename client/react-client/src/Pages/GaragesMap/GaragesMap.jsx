@@ -18,7 +18,7 @@ const cardVariants = {
 
 const hue = (h) => `hsl(${h}, 100%, 50%)`;
 
-function Card({ emoji, hueA, hueB }) {
+function Card({ text, hueA, hueB }) {
   const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`;
 
   return (
@@ -31,25 +31,21 @@ function Card({ emoji, hueA, hueB }) {
     >
       <div className="splash" style={{ background }} />
       <motion.div className="card" variants={cardVariants}>
-        {emoji}
+        {text}
       </motion.div>
     </motion.div>
   );
 }
 
-const food = [
-  ["🍅", 340, 10],
-  ["🍊", 20, 40],
-  ["🍋", 60, 90],
-  ["🍐", 80, 120],
-  ["🍏", 100, 140],
-  ["🫐", 205, 245],
-  ["🍆", 260, 290],
-  ["🍇", 290, 320],
-];
+const garages = [
+  ["PG3", 4545, 10],
+  ["PG4", 4200, 40],
+  ["PG5", 4545, 20],
+  ["PG6", 4545, 120],
+]
 
 export default function App() {
-  return food.map(([emoji, hueA, hueB]) => (
-    <Card emoji={emoji} hueA={hueA} hueB={hueB} key={emoji} />
+  return garages.map(([text, hueA, hueB]) => (
+    <Card text={text} hueA={hueA} hueB={hueB} key={text} />
   ));
 }
