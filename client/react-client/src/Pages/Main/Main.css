@@ -1,0 +1,16 @@
+.main-page {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-button {
+    padding: 20px 30px;
+    font-size: 25px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+}
