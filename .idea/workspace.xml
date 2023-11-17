@@ -5,20 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49142691-95c0-4168-ae45-d57cdeec53b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/parkinghelper.xcodeproj/project.xcworkspace/xcuserdata/roman.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/client/parkinghelper.xcodeproj/project.xcworkspace/xcuserdata/roman.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/parkmeIOS/park/park/ContentView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/client/parkmeIOS/park/park/ContentView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/cars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/cars.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/react-client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/react-client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/react-client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/react-client/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "crop__image",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/roman/Documents/GitHub/ParkMe",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
