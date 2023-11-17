@@ -1,0 +1,7 @@
+.transtion-block{
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    z-index: 0;
+    transition: 0.5s;
+}
