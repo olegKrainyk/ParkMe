@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./GaragesMap.css";
 import { motion } from "framer-motion";
 
 const cardVariants = {

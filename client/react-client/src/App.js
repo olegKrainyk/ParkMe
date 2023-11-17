@@ -1,7 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import Main from './Pages/Main/Main';
-import { AnimatePresence } from 'framer-motion';
+import Main from './Pages/Main/Main'
+import GaragesMap from './Pages/GaragesMap/GaragesMap'
+import { AnimatePresence } from 'framer-motion'
 
 export default function App() {
   return (
@@ -11,7 +12,7 @@ export default function App() {
         
             <Route exact path="/" element={<Main />} />
             <Route exact path="/main" element={<Main />} />
-
+            <Route exact path="/garages" element={<GaragesMap />} />
           
 
           </Routes>
