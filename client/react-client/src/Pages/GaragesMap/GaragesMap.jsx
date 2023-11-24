@@ -1,51 +1,60 @@
 import "./GaragesMap.css";
 import { motion } from "framer-motion";
+import {useState} from "react";
 
-const cardVariants = {
-  offscreen: {
-    y: 300,
-  },
-  onscreen: {
-    y: 50,
-    rotate: -10,
-    transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 0.8,
+
+
+
+
+function GaragesMap() {
+  const [openStates, setOpenStates] = useState(Array(4).fill(false));
+  const cardVariants = {
+    offscreen: {
+      y: 300,
     },
-  },
-};
+    onscreen: {
+      y: 50,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.9,
+      },
+    },
+  };
 
-const hue = (h) => `hsl(${h}, 100%, 50%)`;
+  const handleButtonClick = (index) => {
+    setOpenStates((prevStates) =>
+      prevStates.map((state, i) => (i === index ? !state : state))
+    );
+  };
 
-function Card({ text, hueA, hueB }) {
-  const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`;
+  const buttonLabels = ["Parking Garage 3", "Parking Garage 4", "Parking Garage 5", "Parking Garage 6"];
 
   return (
-    <motion.div
-      className="card-container"
-      initial="offscreen"
-      animate="onscreen"
-      variants={cardVariants}
-      viewport={{ once: true, amount: 0.8 }}
-    >
-      <div className="splash" style={{ background }} />
-      <motion.div className="card" variants={cardVariants}>
-        {text}
-      </motion.div>
-    </motion.div>
+    <div className="garages-map">
+      {buttonLabels.map((label, index) => ( 
+        <motion.div
+          key={index}
+          transition={{ layout: { type: "spring" } }}
+          layout
+          onClick={() => handleButtonClick(index)}
+          className={`garage-button ${openStates[index] ? "open" : ""}`}
+          style={{ borderRadius: "0.5rem", boxShadow: "0px 10px 30px rgba(0,0,0, 0.5)" }}
+          initial="offscreen"
+          animate="onscreen"
+          variants={cardVariants}
+        >
+          <motion.h2 layout="position">{label}</motion.h2>
+          {openStates[index] && (
+            <motion.div>
+              <p>We have 10 Parking Spots on the 6th floor</p>
+            </motion.div>
+          )}
+        </motion.div>
+      ))}
+    </div>
   );
 }
 
-const garages = [
-  ["PG3", 4545, 10],
-  ["PG4", 4200, 40],
-  ["PG5", 4545, 20],
-  ["PG6", 4545, 120],
-]
 
-export default function App() {
-  return garages.map(([text, hueA, hueB]) => (
-    <Card text={text} hueA={hueA} hueB={hueB} key={text} />
-  ));
-}
+export default GaragesMap;
