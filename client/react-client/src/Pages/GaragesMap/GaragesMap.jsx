@@ -1,13 +1,14 @@
 import "./GaragesMap.css";
 import { motion } from "framer-motion";
 import {useState} from "react";
+import axios from 'axios';
 
 
 
 
 
 function GaragesMap() {
-  const [openStates, setOpenStates] = useState(Array(4).fill(false));
+  const [openStates, setOpenStates] = useState(Array(1).fill(false));
   const cardVariants = {
     offscreen: {
       y: 300,
@@ -22,20 +23,31 @@ function GaragesMap() {
     },
   };
 
-  const handleButtonClick = (index) => {
-    setOpenStates((prevStates) =>
-      prevStates.map((state, i) => (i === index ? !state : state))
-    );
+  const handleButtonClick = async (index) => {
+    try {
+      setOpenStates((prevStates) =>
+        prevStates.map((state, i) => (i === index ? !state : state))
+      );
+  
+      const response = await axios.get("http://127.0.0.1:5000/");
+      setResultText(response.data.total_cars);
+    } catch (error) {
+      console.error("Error", error);
+      setResultText('Error fetching data');
+    }
   };
 
-  const buttonLabels = ["Parking Garage 3", "Parking Garage 4", "Parking Garage 5", "Parking Garage 6"];
+  const [resultText, setResultText] = useState('');
+
+  const parkingGarage3 = 155
 
   return (
     <div className="garages-map">
-      {buttonLabels.map((label, index) => ( 
+      {Array(1).fill(null).map((_, index) => (
         <motion.div
           key={index}
-          transition={{ layout: { type: "spring" } }}
+          whileHover={{ scale: [null, 1.0, 1.1] }}
+          transition={{ duration: 0.3}}
           layout
           onClick={() => handleButtonClick(index)}
           className={`garage-button ${openStates[index] ? "open" : ""}`}
@@ -44,10 +56,10 @@ function GaragesMap() {
           animate="onscreen"
           variants={cardVariants}
         >
-          <motion.h2 layout="position">{label}</motion.h2>
+          <motion.h2 layout="position">{`Parking Garage ${index + 3}`}</motion.h2>
           {openStates[index] && (
             <motion.div>
-              <p>We have 10 Parking Spots on the 6th floor</p>
+              {resultText && <p>{parkingGarage3 - resultText} parking spots available</p>}
             </motion.div>
           )}
         </motion.div>

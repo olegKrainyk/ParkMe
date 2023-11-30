@@ -3,12 +3,14 @@ import './Main.css'
 import transition from '../../transition/transition'
 import { Link, useLocation } from 'react-router-dom'
 import { useFollowPointer } from "./use-follow-pointer.ts"
-import { useRef, useState } from "react"
+import { useRef, useEffect, useState } from "react"
+import axios from "axios"
 
 
 
 function Main() {
 
+    const [data, setData] = useState("");
     const ref = useRef(null);
     const { x, y } = useFollowPointer(ref);
 
@@ -19,6 +21,17 @@ function Main() {
     const handleGoToGarages = () => {
         setActivePage('garages');
     }
+
+    useEffect(() => {
+      // Make a GET request to your Python back end
+      axios.get('http://127.0.0.1:5000')
+        .then(response => {
+          setData(response.data.message);
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    }, []);
 
   return (
     <div className="main-page">
